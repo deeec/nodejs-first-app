@@ -9,6 +9,11 @@ app.get("/", (req, res) => {
     res.send("hello world!")
 })
 
+
+io.on("connection", (socket) => {
+    console.log("log");
+})
+
 server.listen(process.env.PORT || 3000, () => {
     console.log("listening on 3000")
 })
